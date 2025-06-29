@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0D8ABC;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#profile img {
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+#taskView {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover {
+  opacity: 0.85;
+}
+#logoutBtn {
+  background: white;
+  color: #0D8ABC;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Main layout */
+main {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.tasks {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+/* Add task section */
+#addTask {
+  grid-column: span 3;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+#addTask input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  margin-bottom: 10px;
+}
+#addTask button {
+  background: #0D8ABC;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Task Sections */
+.tasks {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+.tasks h2 {
+  margin-bottom: 10px;
+  color: #0D8ABC;
+}
+
+/* Task Cards */
+.task-card {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  border-left: 6px solid #0D8ABC;
+  transition: transform 0.2s;
+}
+.task-card:hover {
+  transform: scale(1.01);
+}
+.task-card p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.task-card small {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+.actions button {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+.actions button:last-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Category color markers */
+[data-category=\"daily\"] { border-left-color: #4caf50; }
+[data-category=\"weekly\"] { border-left-color: #2196f3; }
+[data-category=\"monthly\"] { border-left-color: #9c27b0; }
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, #00b4d8, #90e0ef, #caf0f8, #0077b6);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-blob {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at center, #00b4d8, #0077b6);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: moveBlob 20s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes moveBlob {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(200px, 300px); }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  #profile {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #addTask input,
+  #addTask button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+.task-card p {
+  word-wrap: break-word;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;   /* Centers vertically */
+  height: 100vh;        /* Makes the container take up the full viewport height */
+  flex-direction: column;
+  /* Optional: Add a border or background to visualize the container */
+  /* border: 1px solid black; */
+  /* background-color: lightgray; */
+}
+
+.centered-div {
+  /* Add any desired styling for the centered div here */
+  padding: 20px;
+  background-color: lightblue;
+  border: 1px solid black;
+}

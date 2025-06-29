@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo img {
+  width: 64px;
+  margin-bottom: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.logo p {
+  margin-top: 5px;
+  color: #bbb;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  margin-top: 30px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  opacity: 0.9;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+  color: #ccc;
+  margin-top: 15px;
+}

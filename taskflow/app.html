@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div id="profile">
+      <img id="avatar" alt="Avatar" />
+      <span id="username"></span>
+      <select id="taskView">
+        <!-- <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option> -->
+      </select>
+    </div>
+    <button id="logoutBtn">Sign Out</button>
+  </header>
+  <main>
+    <section id="addTask">
+      <input type="text" id="newTask" placeholder="Enter a new task" />
+      <button id="addBtn">Add Task</button>
+    </section>
+
+    <section class="tasks" id="todoSection" style="order: 1">
+      <h2>Todo (<span id="todoCount">0</span>)</h2>
+      <div class="task-list" id="todoTasks"></div>
+    </section>
+
+    <section class="tasks" id="completedSection" style="order: 2">
+      <h2>Completed (<span id="completedCount">0</span>)</h2>
+      <div class="task-list" id="completedTasks"></div>
+    </section>
+
+    <section class="tasks" id="archivedSection" style="order: 3">
+      <h2>Archived (<span id="archivedCount">0</span>)</h2>
+      <div class="task-list" id="archivedTasks"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

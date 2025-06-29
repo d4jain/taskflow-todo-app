@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Login</title>
+  <link rel="stylesheet" href="taskflow/css/login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/security-shield-green.png" alt="Shield Icon" />
+      <h1>TaskFlow</h1>
+      <p>Your Personal Productivity Companion</p>
+      <small><input type="checkbox" checked disabled /> Age verification required for access</small>
+    </div>
+
+    <form id="loginForm" class="login-box">
+      <h2>Verify Your Identity</h2>
+
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" placeholder="dd-mm-yyyy" required />
+
+      <button type="submit">✅ Verify & Continue</button>
+
+      <p class="footer-text">
+        By continuing, you confirm that you are over 10 years old and agree to our terms of service.
+      </p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("fullName").value;
+      const dob = document.getElementById("dob").value;
+      localStorage.setItem("taskflow_user", JSON.stringify({ name, dob }));
+      window.location.href = "app.html"; // your main app page
+    });
+  </script>
+</body>
+</html>
